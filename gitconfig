@@ -1,0 +1,28 @@
+[user]
+	name = Chris Vensko
+	email = chrisvensko@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	di = diff
+	praise = blame
+	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+	thishash = !git log -l --format-format:%H
+	wholetree = !gitk --all $( git fsck | awk '/dangling commit/ {print $3}' )
+	edit-conflicts = !`git st | grep both\\ modified | cut -c 23-1000 | xzrgs echo vi`
+	delete-missing = !git st | grep deleted | cut -c 15-1000 | xzrgs git rm -f
+	ls-ignored = !git ls-files --others -i --exclude-standard --directory
+[merge]
+	renameLimit = 10000
+[push]
+	default = tracking
+[diff]
+	tool = vimdiff
+[github]
+	user = chrisvensko
