@@ -36,7 +36,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -101,3 +101,9 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@h \[\e[33m\]\w\[\e[0m\]\n\$"
+source /usr/local/git/contrib/completion/git-completion.bash
+source /usr/local/git/contrib/completion/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1='\h:\W $(__git_ps1 "(%s) ")\$ '
