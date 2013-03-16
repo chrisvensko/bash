@@ -107,3 +107,4 @@ source /usr/local/git/contrib/completion/git-completion.bash
 source /usr/local/git/contrib/completion/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\h:\W $(__git_ps1 "(%s) ")\$ '
+set PATH="~/bin:$PATH"
