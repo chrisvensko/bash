@@ -102,6 +102,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+###
+# Setup SublimeText2 Packages for Coffeescript, Stylus, and Jade
+###
+#cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+#git clone git://github.com/jashkenas/coffee-script-tmbundle CoffeeScript
+#git clone https://github.com/miksago/jade-tmbundle.git Jade
+#git clone https://github.com/LearnBoost/stylus.git Stylus
+
 export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@h \[\e[33m\]\w\[\e[0m\]\n\$"
 source /usr/local/git/contrib/completion/git-completion.bash
 source /usr/local/git/contrib/completion/git-prompt.sh
