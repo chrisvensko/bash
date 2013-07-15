@@ -12,7 +12,8 @@
 	co = checkout
 	di = diff
 	praise = blame
-        pr = pull --rebase
+	pr = pull --rebase
+	un = log --all --not --remotes --tags
 	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
 	thishash = !git log -l --format-format:%H
 	wholetree = !gitk --all $( git fsck | awk '/dangling commit/ {print $3}' )
