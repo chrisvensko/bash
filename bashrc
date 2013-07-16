@@ -111,8 +111,13 @@ fi
 #git clone https://github.com/LearnBoost/stylus.git Stylus
 
 export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@h \[\e[33m\]\w\[\e[0m\]\n\$"
-source /usr/local/git/contrib/completion/git-completion.bash
-source /usr/local/git/contrib/completion/git-prompt.sh
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+  source /usr/local/git/contrib/completion/git-completion.bash
+fi
+if [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
+  source /usr/local/git/contrib/completion/git-prompt.sh
+fi
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1='\h:\W $(__git_ps1 "(%s) ")\$ '
 set PATH="~/bin:$PATH"
