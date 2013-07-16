@@ -78,6 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
+alias al='ls -alh'
 alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CF'
