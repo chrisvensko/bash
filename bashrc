@@ -312,3 +312,6 @@ EOF
 newwin() {
     newtab "$@" # Simply pass through to 'newtab', which will examine the call stack to see how it was invoked.
 }
+
+[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+export PATH="/usr/local/mysql/bin:$PATH"
