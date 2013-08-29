@@ -315,3 +315,7 @@ newwin() {
 
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 export PATH="/usr/local/mysql/bin:$PATH"
+
+if [ -f ~/tmux-completion ]
+  source ~/tmux-completion
+fi
