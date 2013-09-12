@@ -82,6 +82,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../../'
 
+# helpful git-related aliases that are not git aliases
+alias commit_count='git log --all --not --remotes --tags --oneline | wc -l'
+
 # some more ls aliases
 alias al='ls -alh'
 alias ll='ls -alhF'
