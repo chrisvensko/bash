@@ -85,6 +85,9 @@ alias ....='cd ../../../'
 # helpful git-related aliases that are not git aliases
 alias commit_count='git log --all --not --remotes --tags --oneline | wc -l'
 
+# tmux-related aliases
+alias lt='tmux ls'
+
 # some more ls aliases
 alias al='ls -alh'
 alias ll='ls -lhF'
