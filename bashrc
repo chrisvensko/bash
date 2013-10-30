@@ -322,3 +322,17 @@ export PATH="/usr/local/mysql/bin:$PATH"
 if [ -f ~/tmux-completion ]; then
   source ~/tmux-completion
 fi
+
+st() {
+
+  if [ $HOME = $PWD ]; then
+    tmux ls 2>/dev/null
+    if [ $? -ne 0 ]; then
+      ll
+    fi
+  elif git rev-parse --git-dir &>/dev/null; then
+    git st
+  else
+    ll
+  fi
+}
