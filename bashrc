@@ -101,14 +101,14 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+  . /etc/bash_completion
 fi
 
 ###
@@ -119,7 +119,7 @@ fi
 #git clone https://github.com/miksago/jade-tmbundle.git Jade
 #git clone https://github.com/LearnBoost/stylus.git Stylus
 
-export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@h \[\e[33m\]\w\[\e[0m\]\n\$"
+#export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@h \[\e[33m\]\w\[\e[0m\]\n\$"
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   source /usr/local/git/contrib/completion/git-completion.bash
 fi
@@ -191,6 +191,7 @@ Examples:
     $funcName /path/to/someScript
     $funcName exec /path/to/someScript
 EOF
+#' syntax highlighting fix
         return 0
     fi
 
@@ -238,7 +239,7 @@ EOF
     local CMD_REACTIVATE_PREV_TAB='tell application "Terminal" to set selected of prevTab to true'
 
     if (( $# )); then # Command specified; open a new tab or window, then execute command.
-            # Use the command's first token as the tab title.
+            # Use the first token of the command as the tab title.
         local tabTitle=$1
         case "$tabTitle" in
             exec|eval) # Use following token instead, if the 1st one is 'eval' or 'exec'.
@@ -255,7 +256,7 @@ EOF
             # Step 2: Escape all backslashes again (by doubling them), because AppleScript expects that.
         local cmd="$CMD_PREFIX \"${quotedArgs//\\/\\\\}\""
             # Open new tab or window, execute command, and assign tab title.
-            # '>/dev/null' suppresses AppleScript's output when it creates a new tab.
+            # '>/dev/null' suppresses AppleScript's output when it creates a new tab. '
         if (( makeTab )); then
             if (( inBackground )); then
                 # !! Sadly, because we must create a new tab by sending a keystroke to Terminal, we must briefly activate it, then reactivate the previously active application.
