@@ -5,7 +5,8 @@ setup_bashrc() {
 	# todo - see if .bashrc already exists
 	echo "Setting up .bashrc"
 	ln -s $SCRIPTDIR/bashrc $HOME/.bashrc
-  ln -s $HOME/.bash_profile $HOME/.bashrc
+  ln -s $HOME/.bashrc $HOME/.bash_profile
+  source $HOME/.bashrc
 }
 
 setup_vimrc() {
