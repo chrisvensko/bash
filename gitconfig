@@ -22,6 +22,7 @@
 	ls-ignored = !git ls-files --others -i --exclude-standard --directory
 	info = diff-tree --no-commit-id --name-status -r
   missing = !git log --oneline $1 ^$2
+  ls = log --oneline --graph
 [merge]
 	renameLimit = 10000
 [push]
