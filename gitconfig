@@ -7,10 +7,13 @@
 	branch = auto
 [alias]
 	st = status
+  s = status -s
 	ci = commit
 	br = branch
 	co = checkout
 	di = diff
+  alias = "!git config -l | grep alias | cut -c 7-"
+  ls = log --oneline --graph
 	praise = blame
 	pr = pull --rebase
 	un = log --all --not --remotes --tags
@@ -22,8 +25,6 @@
 	ls-ignored = !git ls-files --others -i --exclude-standard --directory
 	info = diff-tree --no-commit-id --name-status -r
   missing = !git log --oneline $1 ^$2
-  ls = log --oneline --graph
-  alias = "!git config -l | grep alias | cut -c 7-"
 [merge]
 	renameLimit = 10000
 [push]
