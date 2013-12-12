@@ -23,6 +23,7 @@
 	info = diff-tree --no-commit-id --name-status -r
   missing = !git log --oneline $1 ^$2
   ls = log --oneline --graph
+  alias = "!git config -l | grep alias | cut -c 7-"
 [merge]
 	renameLimit = 10000
 [push]
