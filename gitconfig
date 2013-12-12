@@ -1,35 +1,35 @@
 [user]
-	name = Chris Vensko
-	email = chrisvensko@gmail.com
+  name = Chris Vensko
+  email = chrisvensko@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [alias]
-	st = status
+  st = status
   s = status -s
-	ci = commit
-	br = branch
-	co = checkout
-	di = diff
+  ci = commit
+  br = branch
+  co = checkout
+  di = diff
   alias = "!git config -l | grep alias | cut -c 7-"
   ls = log --oneline --graph
-	praise = blame
-	pr = pull --rebase
-	un = log --all --not --remotes --tags
-	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
-	thishash = !git log -l --format-format:%H
-	wholetree = !gitk --all $( git fsck | awk '/dangling commit/ {print $3}' )
-	edit-conflicts = !`git st | grep both\\ modified | cut -c 23-1000 | xzrgs echo vi`
-	delete-missing = !git st | grep deleted | cut -c 15-1000 | xzrgs git rm -f
-	ls-ignored = !git ls-files --others -i --exclude-standard --directory
-	info = diff-tree --no-commit-id --name-status -r
+  praise = blame
+  pr = pull --rebase
+  un = log --all --not --remotes --tags
+  serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+  thishash = !git log -l --format-format:%H
+  wholetree = !gitk --all $( git fsck | awk '/dangling commit/ {print $3}' )
+  edit-conflicts = !`git st | grep both\\ modified | cut -c 23-1000 | xzrgs echo vi`
+  delete-missing = !git st | grep deleted | cut -c 15-1000 | xzrgs git rm -f
+  ls-ignored = !git ls-files --others -i --exclude-standard --directory
+  info = diff-tree --no-commit-id --name-status -r
   missing = !git log --oneline $1 ^$2
 [merge]
-	renameLimit = 10000
+  renameLimit = 10000
 [push]
-	default = tracking
+  default = tracking
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [github]
-	user = chrisvensko
+  user = chrisvensko
