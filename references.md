@@ -7,8 +7,23 @@ References
 
 __For Loops__ 
 
-- http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/  
+- [Examples](http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/)
 
 __Sorting__
 
 - http://www.skorks.com/2010/05/sort-files-like-a-master-with-the-linux-sort-command-bash/
+
+## Vim
+
+__Documentation__
+
+- http://vimdoc.sourceforge.net/htmldoc/
+
+## Sed
+
+- http://www.grymoire.com/unix/sed.html
+
+## Markdown
+
+- __Syntax__ http://daringfireball.net/projects/markdown/syntax
+- __Cheat Sheet__ http://blog.lib.umn.edu/crosb002/leadership/Markdown_Cheat_Sheet.pdf
