@@ -27,3 +27,6 @@ __Documentation__
 
 - __Syntax__ http://daringfireball.net/projects/markdown/syntax
 - __Cheat Sheet__ http://blog.lib.umn.edu/crosb002/leadership/Markdown_Cheat_Sheet.pdf
+
+## PHP
+- __Profiling__ http://akrabat.com/php/quick-and-dirty-profiling/
