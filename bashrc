@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+set -o vi
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -320,6 +322,7 @@ newwin() {
 }
 
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 export PATH="/usr/local/mysql/bin:$PATH"
 
 if [ -f ~/tmux-completion ]; then
