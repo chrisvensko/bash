@@ -1,0 +1,3 @@
+alias t='tmux'
+complete -F _tmux t
+alias sublime='open -a "Sublime Text 2"'
