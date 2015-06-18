@@ -24,7 +24,8 @@
   delete-missing = !git st | grep deleted | cut -c 15-1000 | xzrgs git rm -f
   ls-ignored = !git ls-files --others -i --exclude-standard --directory
   info = diff-tree --no-commit-id --name-status -r
-  missing = !git log --oneline $1 ^$2
+  missing = !git log --oneline @{u} ^$1
+  new = !git log --oneline @{u}..
 [merge]
   renameLimit = 10000
 [push]
