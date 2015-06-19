@@ -72,7 +72,7 @@ endif
 set encoding=utf8
 
 " Set unix as the standard file type
-set ffs=unix,mac,dos
+set ffs=unix,dos
 
 " Turn backup off, since everything is in git anyway
 set nobackup
