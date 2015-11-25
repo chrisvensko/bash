@@ -13,7 +13,7 @@
   co = checkout
   di = diff
   alias = "!git config -l | grep alias | cut -c 7-"
-  ls = log --oneline --graph
+  ls = log --oneline --graph --pretty=format:'%C(yellow)%h%Creset %C(white)%ad%Creset %Cred%an%Creset %s' --date=relative
   praise = blame
   pr = pull --rebase
   un = log --all --not --remotes --tags
@@ -24,8 +24,11 @@
   delete-missing = !git st | grep deleted | cut -c 15-1000 | xzrgs git rm -f
   ls-ignored = !git ls-files --others -i --exclude-standard --directory
   info = diff-tree --no-commit-id --name-status -r
-  missing = !git log --oneline @{u} ^$1
-  new = !git log --oneline @{u}..
+  missing = !git ls --no-merges @{0} ^$1
+  new = !git ls @{u}..
+  lastTag = !git describe --tags `git rev-list --tags --max-count=1`
+  toTagDiff = !git diff `git lasttag`
+  toTag = !git missing `git lasttag`
 [merge]
   renameLimit = 10000
 [push]
