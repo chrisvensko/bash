@@ -342,3 +342,20 @@ st() {
     ll
   fi
 }
+
+edit() {
+  command vim `find . -iname "$1*" | head -n 1`
+}
+
+_edit() {
+  local cur prev opts files
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  COMPREPLY=()
+
+  files=`find . -iname "${cur}*"`
+
+  COMPREPLY=( $(compgen -f "${files}" "${cur}") )
+  return 0
+}
+
+complete -F _edit edit
