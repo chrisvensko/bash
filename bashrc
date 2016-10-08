@@ -329,6 +329,10 @@ if [ -f ~/tmux-completion ]; then
   source ~/tmux-completion
 fi
 
+if [ -f ~/.bash_keys ]; then
+  source ~/.bash_keys
+fi
+
 st() {
 
   if [ $HOME = $PWD ]; then
@@ -359,3 +363,12 @@ _edit() {
 }
 
 complete -F _edit edit
+
+js() {
+  echo '{"a": 48.2, "b": "Pleasant Hill"}' | jq '"It is currently \(.a) degrees in \(.b)"' | say
+}
+
+weather() {
+  curl -s "http://api.wunderground.com/api/$WEATHER_API_KEY/conditions/q/CA/Pleasant_Hill.json" | jq '"It is currently \(.current_observation.temp_f) degrees in \(.current_observation.display_location.city) \(.current_observation.display_location.state_name)"' | say
+}
+export PATH="/usr/local/sbin:$PATH"

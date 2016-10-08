@@ -1,0 +1,4 @@
+alias t='tmux'
+complete -F _tmux t
+alias sublime='open -a "Sublime Text 2"'
+alias weather='curl http://api.wunderground.com/api/$WEATHER_API_KEY/conditions/q/CA/Pleasant_Hill.json | jq .current_observation.temp_f | say'
