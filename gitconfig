@@ -33,6 +33,7 @@
   renameLimit = 10000
 [push]
   default = tracking
+	autoSetupRemote = true
 [diff]
   tool = vimdiff
 [github]
