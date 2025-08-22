@@ -29,6 +29,8 @@
   lastTag = !git describe --tags `git rev-list --tags --max-count=1`
   toTagDiff = !git diff `git lasttag`
   toTag = !git missing `git lasttag`
+  up = "!f() { cb=\"$(git branch --show-current)\"; if [[ \"$cb\" != \"main\" ]]; then git checkout main && git pull --rebase && git checkout \"$cb\" && git rebase main; else echo \"On main. Running git pull --rebase..\"; git pr; fi }; f"
+
 [merge]
   renameLimit = 10000
 [push]
@@ -36,5 +38,6 @@
 	autoSetupRemote = true
 [diff]
   tool = vimdiff
+  wsErrorHighlight = all
 [github]
   user = chrisvensko
