@@ -5,8 +5,6 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 source /usr/local/git/contrib/completion/git-completion.bash
 
-export GOOGLE_MAPS_API_KEY=AIzaSyCLhFXQ-c1U27U6g4dhKtv4gAD4n5f6pbE
-
 set -o vi
 
 # If not running interactively, don't do anything
